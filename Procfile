@@ -1,1 +1,1 @@
-web: make bootstrap && ./vault server -dev
+web: ./vault server -dev
