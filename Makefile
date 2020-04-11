@@ -8,6 +8,8 @@ ifeq (,$(wildcard ./vault))
 	wget -q -O tmp.zip https://releases.hashicorp.com/vault/1.4.0/vault_1.4.0_linux_amd64.zip && unzip tmp.zip && rm tmp.zip
 endif
 
+heroku: bootstrap
+
 help:
 	@echo -e "Usage: make [target] ...\n"
 	@echo -e "bootstrap 	: Download a project executable file"
@@ -15,4 +17,4 @@ help:
 	@echo -e "Written by $(SCRIPT_AUTHOR), version $(SCRIPT_VERSION)"
 	@echo -e "Please report any bug or error to the author."
 
-.PHONY: bootstrap help download
+.PHONY: bootstrap help
